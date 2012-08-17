@@ -1,0 +1,9 @@
+(function($){
+    $.fn.myPlugin=function(param){
+	var default='My Plugin!';
+	
+	var plugin=this;
+	
+	
+    }
+})(jQuery);
