@@ -1,15 +1,28 @@
 <html>
 <head>
+<style>
+#clickable{
+ border: solid 1px;
+ background: #77DFED;
+ width: 150px;
+ height: 20px;
+ font-size: 17px;
+ text-align: center;
+ cursor: default;
+}
+</style>
 <script src="../jquery-1.8.0.min.js"></script>
 <script src="jquery.myplugin.js"></script>
 <script>
 	$(function(){
-		$('#button').myPlugin("Test");
+		$('#button').myPlugin("button");
+	        $('#clickable').myPlugin("div");
 	});
 </script>
 </head>
 
 <body>
 <input type="button" value="btn" id="button"/>
+<p><div id="clickable">Click Me!</div></p>
 </body>
 </html>
