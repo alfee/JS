@@ -1,3 +1,4 @@
+#javascript Project
 #Author
--Daisuke Takamizawa
+-Daisuke Takamizawa  
 -17/08/12
