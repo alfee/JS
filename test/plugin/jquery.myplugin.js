@@ -1,8 +1,10 @@
 (function($){
     $.fn.myPlugin=function(element,options){
-	this.click(function(){
-	    alert(element);
+	return this.each(function(){
+	    $(this).click(function(){
+		alert(element);
+	    });
 	});
-	return this;
+	
     }
 })(jQuery);
