@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+#area{
+  border: solid 1px #000;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+</style>
+
+<script src='../jquery-1.8.0.min.js'></script>
+<script>
+  $(document).ready(function(){
+    var flg=false;
+    
+    function myFunc(){
+      $('body').append('<p>myEvent occured!</p>');
+      setTimeout(function(){$('#area').trigger('myEvent')},500);
+    }
+    
+    $('#area').bind('myEvent',function(){
+      if(flg){
+      myFunc();
+    }
+    });
+    
+    $('#area').mousedown(function(){
+      flg=true;
+      $('#area').trigger('myEvent');
+    });
+    
+    $('*').mouseup(function(){
+      flg=false;
+    });
+    
+  });
+</script>
+
+</head>
+<body>
+  <div id='area'>
+    <p>clickable area</p>
+  </div>
+</body>
+</html>
